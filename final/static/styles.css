@@ -1,0 +1,286 @@
+/* style.css */
+
+/* Reset default browser styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('body.avif') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+nav ul li a {
+    color: grey; /* Color for "Register", "Home", and "Login" */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background: url('header.avif') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Georgia', serif; /* Different font style */
+    position: relative;
+    border-bottom: 1px solid #fff; /* White border line at the bottom of the header */
+}
+
+main {
+    border-top: 1px solid #fff; /* White border line at the top of the main content */
+}
+
+header h1 {
+    font-size: 3em; /* Bigger font size */
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+header nav ul li a {
+    color: grey;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Form styles */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    width: 60%; /* Adjust width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid lightblue;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent background color */
+    font-weight: bold;
+}
+
+button {
+    width: auto; /* Auto width for buttons */
+    background-color: rgba(173, 216, 230, 0.5); /* Lighter blue with transparency */
+    color: #333; /* Text color */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(173, 216, 230, 0.8); /* Lighter blue with higher transparency on hover */
+}
+
+/* style.css */
+
+.paragraph {
+    margin-bottom: 20px;
+    text-align: justify; /* Justify text for a cleaner look */
+    font-size: 20px; /* Increase font size */
+    font-family: 'Arial', sans-serif; /* Use a different font family */
+    color: #ffffff; /* Darker text color */
+
+}
+
+.paragraph p {
+    margin: 0; /* Reset margin for paragraphs inside .paragraph */
+}
+
+.welcome-heading {
+    text-align: center; /* Center align the text */
+    font-size: 36px; /* Larger font size */
+    font-family: 'Georgia', serif; /* Different font family */
+    color: #fffcfc; /* Darker text color */
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
+/* style.css */
+
+/* style.css */
+
+/* Footer styles */
+footer {
+    position: fixed; /* Fixed position */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+    border-top: 2px solid #fff; /* White border on top */
+    color: #fff; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 20px 0; /* Padding top and bottom */
+    z-index: 1000; /* Ensure footer stays above other content */
+}
+
+/* Action links container */
+
+
+.register-link,
+.login-link {
+    font-size: 22px; /* Slightly larger font size */
+    color: red; /* Red color for the links */
+    text-decoration: none; /* Remove default underline */
+}
+
+.register-link:hover,
+.login-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.center-content {
+    max-width: 800px; /* Adjust based on your design */
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 100px; /* Add margin at the bottom to push content above the footer */
+}
+
+.profile-container {
+    text-align: center;
+    margin-top: 50px;
+}
+.change-form {
+    display: none;
+}
+
+.transparent-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.transparent-table th,
+.transparent-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.transparent-table th {
+    background-color: rgba(41, 37, 37, 0.5); /* Transparent white color for header cells */
+}
+
+.transparent-table td {
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white color for table cells */
+}
+
+.header-cell {
+    font-weight: bold;
+}
+
+/* Shared styles */
+.heading {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form label,
+.form input {
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Shared styles for headings */
+.register-heading,
+.login-heading {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Shared styles for forms */
+.register-form,
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-form label,
+.login-form label {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.register-form input,
+.login-form input {
+    margin: 5px 0;
+    text-align: left; /* Left-align text inside input fields */
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.song-title{
+    color: #000000;
+}
+.artist-name{
+    color: #000000;
+}
+.delete-link
+{
+    color: #ff0000;
+    text-decoration: underline;
+}

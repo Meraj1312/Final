@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Welcome, {{ username }}</h2>
+    <form action="/search" method="post">
+        <input type="text" name="query" placeholder="Search songs">
+        <button type="submit">Search</button>
+    </form>
+    <h3>Your Songs</h3>
+    <table id="song-table" class="transparent-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>URL</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if songs %}
+                {% for song in songs %}
+                    <tr>
+                        <td class="song-title">{{ song.title }}</td>
+                        <td class="artist-name">{{ song.artist }}</td>
+                        <td><a href="{{ song.url }}" target="_blank">Link</a></td>
+                        <td><a href="/delete-song/{{ song.id }}" class="delete-link">Delete</a></td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="4">{{ message }}</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+    <button id="add-song-btn">Add New Song</button>
+    <div id="add-song-form" style="display: none;">
+        <h3>Add a New Song</h3>
+        <form action="/add-song" method="post">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required autocomplete="off"><br>
+            <label for="artist">Artist:</label><br>
+            <input type="text" id="artist" name="artist" required autocomplete="off"><br>
+            <label for="url">URL:</label><br>
+            <input type="text" id="url" name="url" required autocomplete="off"><br>
+            <button type="submit">Add Song</button>
+        </form>
+    </div>
+    <p><a href="/logout">Logout</a></p>
+    <div style="margin-bottom: 100px;"></div>
+{% endblock %}
+
+{% block additional_scripts %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var addSongBtn = document.getElementById("add-song-btn");
+            var addSongForm = document.getElementById("add-song-form");
+
+            addSongBtn.addEventListener("click", function() {
+                // Toggle the visibility of the form
+                if (addSongForm.style.display === "none") {
+                    addSongForm.style.display = "block";
+                } else {
+                    addSongForm.style.display = "none";
+                }
+            });
+        });
+    </script>
+{% endblock %}

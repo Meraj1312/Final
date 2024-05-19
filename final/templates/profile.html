@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% block title %}Profile - Music App{% endblock %}
+
+{% block content %}
+<div class="profile">
+    <h2 style="text-align: center; font-size: 24px; font-family: Arial, sans-serif; margin-bottom: 20px;">Welcome to your profile, {{ username }}</h2>
+    
+    <form action="/change-username" method="POST" style="text-align: center;">
+        <button type="button" onclick="toggleForm('change_username')">Change Username</button>
+        <div id="change_username" style="display: none;">
+            <label for="new_username">New Username:</label>
+            <input type="text" id="new_username" name="new_username" required autocomplete="off"><br>
+            <button type="submit">Update Username</button>
+        </div>
+    </form>
+
+    <form action="/change-password" method="POST" style="text-align: center;">
+        <button type="button" onclick="toggleForm('change_password')">Change Password</button>
+        <div id="change_password" style="display: none;">
+            <label for="new_password">New Password:</label>
+            <input type="password" id="new_password" name="new_password" required><br>
+            <button type="submit">Update Password</button>
+        </div>
+    </form>
+
+    <h3 style="text-align: center; margin-top: 30px;">Delete Profile</h3>
+    <div id="deleteButtonContainer">
+        <button id="deleteButton" class="btn btn-danger" style="display: block; margin: 20px auto 0;" onclick="showPasswordInput()">Delete Profile</button>
+    </div>
+    <div id="passwordInputContainer" style="display: none;">
+        <form id="deleteForm" onsubmit="return confirmDelete();" action="/delete-profile" method="post">
+            <label for="password">Enter Your Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit" class="btn btn-danger">Confirm Delete</button>
+        </form>
+    </div>
+</div>
+<script>
+    function toggleForm(formId) {
+        var form = document.getElementById(formId);
+        if (form.style.display === "none") {
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
+    }
+
+    function showPasswordInput() {
+        var deleteButtonContainer = document.getElementById("deleteButtonContainer");
+        var passwordInputContainer = document.getElementById("passwordInputContainer");
+        deleteButtonContainer.style.display = "none";
+        passwordInputContainer.style.display = "block";
+    }
+
+    function confirmDelete() {
+        var password = document.getElementById("password").value;
+        if (password === null || password === "") {
+            alert("Password is required.");
+            return false; // Cancel form submission if password is empty
+        }
+        // Password validation and form submission logic here
+        return true; // Allow form submission
+    }
+</script>
+{% endblock %}

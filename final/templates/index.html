@@ -1,0 +1,33 @@
+<!-- index.html -->
+
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="center-content">
+        <h2 class="welcome-heading">Welcome to Tunedly!</h2><br><br>
+        <div class="paragraph">
+            <p>Tunedly is a personalized music app designed to provide users with quick access to their favorite songs, including those not available on other platforms, through YouTube links. This app stores music along with their specific links in a secure database to ensure that users can always access their preferred versions of songs. The specific links include various versions of the songs, such as movie versions, originals, slowed and reverbed, sped up, explicit, or censored versions, among others.</p>
+        </div><br>
+        
+        <div class="paragraph">Key features of Tunedly include</div><details>
+            <summary class="paragraph"></summary>
+        <ul class="paragraph">
+            <li>Quick Access to Favorite Songs</li><br>
+            <li>Comprehensive Link Management</li><br>
+            <li>Secure Database Storage</li><br>
+            <li>Personalized Music Experience</li><br>
+            <li>User-Friendly Interface</li><br>
+            <li>Customizable Preferences</li><br>
+        </ul>
+        </details><br>
+        
+        <div class="paragraph">
+            <p>Overall, Tunedly aims to enhance users' music listening experience by providing quick access to their favorite songs with customizable options and secure storage of music links.
+        <a href="/register" class="register-link">Register Now!</a>
+        <span>or</span>
+        <a href="/login" class="login-link">Login</a>
+        </p></div>
+    </div>
+{% endblock %}
