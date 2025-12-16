@@ -1,4 +1,3 @@
-# YOUR PROJECT TITLE
 Tunedly
 #### Video Demo:  <URL https://youtu.be/or0lEvIRYp8>
 #### Description:
@@ -69,5 +68,6 @@ Password Hashing and Validation: Robust password hashing techniques were impleme
 
 
 Conclusion:
+
 
 The Tunedly Music App project demonstrates the effective utilization of Flask, HTML, CSS, JavaScript, and SQLite to create a user-friendly platform for managing and accessing favorite songs. Through iterative development and strategic problem-solving, the application provides a seamless music listening experience while prioritizing security and usability.
