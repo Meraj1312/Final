@@ -1,6 +1,6 @@
 # Tunedly – Flask Application with Authentication & Access Control
 
-#### Video Demo: <URL>
+#### Video Demo: <URL https://youtu.be/or0lEvIRYp8>
 
 ## Overview
 Tunedly is a Python Flask web application built to practice secure authentication, session handling, and user-scoped data access. The project focuses on implementing and validating common web application security concepts rather than frontend complexity.
@@ -23,3 +23,4 @@ Tunedly is a Python Flask web application built to practice secure authenticatio
 - Access control enforcement
 - Prevention of unauthorized data access (IDOR awareness)
 - Input validation and server-side trust boundaries
+
